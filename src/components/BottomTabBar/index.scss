@@ -10,7 +10,7 @@
   align-items: flex-end;
   height: 120rpx;
   padding-bottom: env(safe-area-inset-bottom);
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   box-shadow: 0 -8rpx 32rpx rgba(59, 112, 82, 0.06);
   z-index: 100;
@@ -23,8 +23,9 @@
   align-items: center;
   justify-content: center;
   gap: 4rpx;
-  padding: 16rpx 32rpx;
+  flex: 1;
   height: 100%;
+  padding: 16rpx 0;
 }
 
 .tab-icon {
