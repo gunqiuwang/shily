@@ -1,52 +1,54 @@
+// 指标卡片
 .metric-card {
+  width: 100%;
+  box-sizing: border-box;
   background: #FFFFFF;
-  border-radius: 40upx;
-  padding: 32upx;
-  box-shadow: 0 8upx 32upx rgba(59, 112, 82, 0.06);
-  min-width: 160upx;
+  border-radius: 32rpx;
+  padding: 28rpx 24rpx;
+  box-shadow: 0 8rpx 32rpx rgba(59, 112, 82, 0.06);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16upx;
+  gap: 12rpx;
+}
 
-  &__icon {
-    font-size: 48upx;
-  }
+.metric-card__icon {
+  font-size: 48rpx;
+}
 
-  &__label {
-    font-size: 24upx;
-    color: #6B7C76;
-  }
+.metric-card__label {
+  font-size: 24rpx;
+  color: #6B7C76;
+}
 
-  &__value {
-    display: flex;
-    align-items: baseline;
-    gap: 4upx;
-  }
+.metric-card__value {
+  display: flex;
+  align-items: baseline;
+  gap: 4rpx;
+}
 
-  &__number {
-    font-size: 40upx;
-    font-weight: 600;
-    color: #1F2D2A;
-  }
+.metric-card__number {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #1F2D2A;
+}
 
-  &__unit {
-    font-size: 24upx;
-    color: #6B7C76;
-  }
+.metric-card__unit {
+  font-size: 24rpx;
+  color: #6B7C76;
+}
 
-  &__progress {
-    width: 100%;
-    height: 8upx;
-    background: #E8EFEA;
-    border-radius: 4upx;
-    overflow: hidden;
-  }
+.metric-card__progress {
+  width: 100%;
+  height: 8rpx;
+  background: #E8EFEA;
+  border-radius: 4rpx;
+  overflow: hidden;
+}
 
-  &__progress-bar {
-    height: 100%;
-    background: linear-gradient(90deg, #7BC89C, #9DDFC0);
-    border-radius: 4upx;
-    transition: width 0.3s ease;
-  }
+.metric-card__progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #7BC89C, #9DDFC0);
+  border-radius: 4rpx;
+  transition: width 0.3s ease;
 }

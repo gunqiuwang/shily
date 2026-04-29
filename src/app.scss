@@ -1,12 +1,14 @@
 page {
-  background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%);
+  width: 100%;
   min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'SF Pro', sans-serif;
-  font-size: 15px;
+  background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif;
+  font-size: 30rpx;
   color: #1F2D2A;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 * {

@@ -1,124 +1,136 @@
+// 天气页面
 .weather-page {
+  width: 100%;
   min-height: 100vh;
+  padding: 32rpx;
+  padding-top: calc(env(safe-area-inset-top) + 32rpx);
+  padding-bottom: 200rpx;
+  box-sizing: border-box;
   background: linear-gradient(180deg, #EEF7FA 0%, #DDF5E8 50%, #F8FAF7 100%);
-  padding: env(safe-area-inset-top) 16upx 20upx;
+}
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 16upx 0;
-  }
+.weather-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
 
-  &__city {
-    font-size: 28upx;
-    font-weight: 700;
-    color: #1F2D2A;
-  }
+.weather-page__city {
+  font-size: 56rpx;
+  font-weight: 700;
+  color: #1F2D2A;
+}
 
-  &__temp {
-    text-align: right;
-  }
+.weather-page__temp {
+  text-align: right;
+}
 
-  &__degree {
-    display: block;
-    font-size: 48upx;
-    font-weight: 300;
-    color: #1F2D2A;
-    line-height: 1;
-  }
+.weather-page__degree {
+  display: block;
+  font-size: 96rpx;
+  font-weight: 300;
+  color: #1F2D2A;
+  line-height: 1;
+}
 
-  &__condition {
-    display: block;
-    font-size: 15upx;
-    color: #6B7C76;
-    text-align: right;
-  }
+.weather-page__condition {
+  display: block;
+  font-size: 30rpx;
+  color: #6B7C76;
+  text-align: right;
+}
 
-  &__scene {
-    position: relative;
-    height: 280upx;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
+.weather-page__scene {
+  position: relative;
+  height: 560rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 48rpx 0;
+}
 
-  &__sun-light {
-    position: absolute;
-    top: 20upx;
-    right: 60upx;
-    width: 60upx;
-    height: 60upx;
-    background: radial-gradient(circle, rgba(255, 250, 240, 0.9) 0%, transparent 70%);
-    border-radius: 50%;
-  }
+.weather-page__sun-light {
+  position: absolute;
+  top: 40rpx;
+  right: 120rpx;
+  width: 120rpx;
+  height: 120rpx;
+  background: radial-gradient(circle, rgba(255, 250, 240, 0.9) 0%, transparent 70%);
+  border-radius: 50%;
+}
 
-  &__hills {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 120upx;
-    background: linear-gradient(180deg, #DDF5E8 0%, #BFDCEB 100%);
-    border-radius: 50% 50% 0 0;
-    opacity: 0.6;
-  }
+.weather-page__hills {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 240rpx;
+  background: linear-gradient(180deg, #DDF5E8 0%, #BFDCEB 100%);
+  border-radius: 50% 50% 0 0;
+  opacity: 0.6;
+}
 
-  &__content {
-    position: relative;
-    z-index: 1;
-  }
+.weather-page__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
 
-  &__advice-card {
-    margin-bottom: 20upx;
-  }
+.weather-page__advice-card {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 40rpx;
+}
 
-  &__advice-header {
-    margin-bottom: 12upx;
-  }
+.weather-page__advice-header {
+  margin-bottom: 24rpx;
+}
 
-  &__advice-title {
-    font-size: 17upx;
-    font-weight: 600;
-    color: #1F2D2A;
-  }
+.weather-page__advice-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #1F2D2A;
+}
 
-  &__advice-text {
-    font-size: 15upx;
-    color: #6B7C76;
-    line-height: 1.6;
-  }
+.weather-page__advice-text {
+  font-size: 30rpx;
+  color: #6B7C76;
+  line-height: 1.6;
+}
 
-  &__suggestions {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12upx;
-  }
+.weather-page__suggestions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24rpx;
+  width: 100%;
+}
 
-  &__suggestion-item {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10upx);
-    border-radius: 16upx;
-    padding: 16upx;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8upx;
-  }
+.weather-page__suggestion-item {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border-radius: 32rpx;
+  padding: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16rpx;
+}
 
-  &__suggestion-icon {
-    font-size: 24upx;
-  }
+.weather-page__suggestion-icon {
+  font-size: 48rpx;
+}
 
-  &__suggestion-label {
-    font-size: 12upx;
-    color: #6B7C76;
-  }
+.weather-page__suggestion-label {
+  font-size: 24rpx;
+  color: #6B7C76;
+}
 
-  &__suggestion-value {
-    font-size: 15upx;
-    font-weight: 600;
-    color: #1F2D2A;
-  }
+.weather-page__suggestion-value {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1F2D2A;
 }

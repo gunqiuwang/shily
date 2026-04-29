@@ -1,38 +1,38 @@
+// 底部 Tab 导航
 .bottom-tab-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  height: 144upx;
+  align-items: flex-end;
+  height: 120rpx;
   padding-bottom: env(safe-area-inset-bottom);
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(20px);
-  box-shadow: 0 -16upx 48upx rgba(59, 112, 82, 0.06);
+  box-shadow: 0 -8rpx 32rpx rgba(59, 112, 82, 0.06);
   z-index: 100;
+  box-sizing: border-box;
 }
 
 .tab-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8upx;
-  padding: 16upx 32upx;
-  transition: all 0.2s ease;
-
-  &--active {
-    transform: scale(1.05);
-  }
+  justify-content: center;
+  gap: 4rpx;
+  padding: 16rpx 32rpx;
+  height: 100%;
 }
 
 .tab-icon {
-  font-size: 48upx;
+  font-size: 48rpx;
   line-height: 1;
 }
 
 .tab-label {
-  font-size: 22upx;
+  font-size: 22rpx;
   font-weight: 500;
 }

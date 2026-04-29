@@ -1,66 +1,69 @@
+// 环形分数
 .circular-score {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  &--small {
-    width: 160upx;
-    height: 160upx;
-  }
+.circular-score--small {
+  width: 160rpx;
+  height: 160rpx;
+}
 
-  &--medium {
-    width: 240upx;
-    height: 240upx;
-  }
+.circular-score--medium {
+  width: 240rpx;
+  height: 240rpx;
+}
 
-  &--large {
-    width: 320upx;
-    height: 320upx;
-  }
+.circular-score--large {
+  width: 320rpx;
+  height: 320rpx;
+}
 
-  &__ring {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
+.circular-score__ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
-  &__bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 12upx solid #E8EFEA;
-    border-radius: 50%;
-  }
+.circular-score__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 12rpx solid #E8EFEA;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
 
-  &__progress {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 12upx solid transparent;
-    border-top-color: #7BC89C;
-    border-right-color: #9DDFC0;
-    border-radius: 50%;
-    transform: rotate(-45deg);
-  }
+.circular-score__progress {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 12rpx solid transparent;
+  border-top-color: #7BC89C;
+  border-right-color: #9DDFC0;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-  }
+.circular-score__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
 
-  &__number {
-    font-size: 64upx;
-    font-weight: 700;
-    color: #1F2D2A;
-    line-height: 1;
-  }
+.circular-score__number {
+  font-size: 64rpx;
+  font-weight: 700;
+  color: #1F2D2A;
+  line-height: 1;
+}
 
-  &__label {
-    font-size: 24upx;
-    color: #6B7C76;
-    margin-top: 8upx;
-  }
+.circular-score__label {
+  font-size: 24rpx;
+  color: #6B7C76;
+  margin-top: 8rpx;
 }

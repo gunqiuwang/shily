@@ -1,135 +1,151 @@
+// 目标页面
 .goal-page {
+  width: 100%;
   min-height: 100vh;
+  padding: 32rpx;
+  padding-top: calc(env(safe-area-inset-top) + 32rpx);
+  padding-bottom: 200rpx;
+  box-sizing: border-box;
   background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%);
-  padding: env(safe-area-inset-top) 16upx 100upx;
+}
 
-  &__header {
-    padding: 16upx 0;
-  }
+.goal-page__header {
+  width: 100%;
+  margin-bottom: 32rpx;
+}
 
-  &__title {
-    font-size: 24upx;
-    font-weight: 600;
-    color: #1F2D2A;
-  }
+.goal-page__title {
+  font-size: 48rpx;
+  font-weight: 600;
+  color: #1F2D2A;
+}
 
-  &__stage-card {
-    background: linear-gradient(135deg, #DDF5E8 0%, #EEF7FA 100%);
-    margin-bottom: 24upx;
-  }
+.goal-page__stage-card {
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, rgba(221, 245, 232, 0.9) 0%, rgba(238, 247, 250, 0.9) 100%);
+  border-radius: 32rpx;
+  padding: 32rpx;
+  margin-bottom: 48rpx;
+}
 
-  &__stage-label {
-    display: block;
-    font-size: 12upx;
-    color: #6B7C76;
-    margin-bottom: 4upx;
-  }
+.goal-page__stage-label {
+  display: block;
+  font-size: 24rpx;
+  color: #6B7C76;
+  margin-bottom: 8rpx;
+}
 
-  &__stage-name {
-    display: block;
-    font-size: 20upx;
-    font-weight: 600;
-    color: #1F2D2A;
-    margin-bottom: 4upx;
-  }
+.goal-page__stage-name {
+  display: block;
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #1F2D2A;
+  margin-bottom: 8rpx;
+}
 
-  &__stage-progress {
-    display: block;
-    font-size: 13upx;
-    color: #6B7C76;
-    margin-bottom: 16upx;
-  }
+.goal-page__stage-progress {
+  display: block;
+  font-size: 26rpx;
+  color: #6B7C76;
+  margin-bottom: 32rpx;
+}
 
-  &__progress-bar {
-    height: 8upx;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 4upx;
-    overflow: hidden;
-    margin-bottom: 12upx;
-  }
+.goal-page__progress-bar {
+  height: 16rpx;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8rpx;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+}
 
-  &__progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #7BC89C, #9DDFC0);
-    border-radius: 4upx;
-    transition: width 0.3s ease;
-  }
+.goal-page__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7BC89C, #9DDFC0);
+  border-radius: 8rpx;
+  transition: width 0.3s ease;
+}
 
-  &__stage-goal {
-    display: block;
-    font-size: 14upx;
-    color: #5AAF7E;
-    font-weight: 500;
-  }
+.goal-page__stage-goal {
+  display: block;
+  font-size: 28rpx;
+  color: #5AAF7E;
+  font-weight: 500;
+}
 
-  &__section-title {
-    display: block;
-    font-size: 17upx;
-    font-weight: 600;
-    color: #1F2D2A;
-    margin-bottom: 12upx;
-  }
+.goal-page__section-title {
+  display: block;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #1F2D2A;
+  margin-bottom: 24rpx;
+}
 
-  &__tasks {
-    background: white;
-    border-radius: 20upx;
-    padding: 16upx;
-    box-shadow: 0 4upx 16upx rgba(59, 112, 82, 0.06);
-    margin-bottom: 24upx;
-  }
+.goal-page__tasks {
+  width: 100%;
+  background: white;
+  border-radius: 32rpx;
+  padding: 32rpx;
+  box-shadow: 0 8rpx 32rpx rgba(59, 112, 82, 0.06);
+  margin-bottom: 48rpx;
+  box-sizing: border-box;
+}
 
-  &__task-item {
-    display: flex;
-    align-items: center;
-    gap: 12upx;
-    padding: 12upx 0;
-    border-bottom: 1upx solid #E8EFEA;
+.goal-page__task-item {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #E8EFEA;
+}
 
-    &:last-child {
-      border-bottom: none;
-    }
-  }
+.goal-page__task-item:last-child {
+  border-bottom: none;
+}
 
-  &__task-check {
-    width: 22upx;
-    height: 22upx;
-    border: 2upx solid #CBD5D1;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12upx;
-    color: white;
+.goal-page__task-check {
+  width: 44rpx;
+  height: 44rpx;
+  border: 4rpx solid #CBD5D1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  color: white;
+  box-sizing: border-box;
+}
 
-    &--done {
-      background: #7BC89C;
-      border-color: #7BC89C;
-    }
-  }
+.goal-page__task-check--done {
+  background: #7BC89C;
+  border-color: #7BC89C;
+}
 
-  &__task-label {
-    font-size: 15upx;
-    color: #1F2D2A;
+.goal-page__task-label {
+  font-size: 30rpx;
+  color: #1F2D2A;
+}
 
-    &--done {
-      color: #A8B6B0;
-      text-decoration: line-through;
-    }
-  }
+.goal-page__task-label--done {
+  color: #A8B6B0;
+  text-decoration: line-through;
+}
 
-  &__footer {
-    padding: 12upx 0;
-  }
+.goal-page__footer {
+  width: 100%;
+  padding: 24rpx 0;
+}
 
-  &__secondary-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #F1F8F4;
-    color: #2F6B4F;
-    border-radius: 18upx;
-    padding: 14upx 24upx;
-    font-size: 15upx;
-    font-weight: 500;
-  }
+.goal-page__secondary-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F1F8F4;
+  color: #2F6B4F;
+  border-radius: 36rpx;
+  padding: 28rpx 48rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+  box-sizing: border-box;
 }

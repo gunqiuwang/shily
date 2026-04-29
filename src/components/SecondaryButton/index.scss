@@ -1,11 +1,14 @@
+// 次按钮
 .secondary-button {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #F1F8F4;
   color: #2F6B4F;
-  border-radius: 36upx;
-  padding: 24upx 48upx;
-  font-size: 30upx;
+  border-radius: 36rpx;
+  padding: 24rpx 48rpx;
+  font-size: 30rpx;
   font-weight: 500;
+  box-sizing: border-box;
 }
