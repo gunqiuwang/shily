@@ -1,4 +1,4 @@
-import { View, Text, Image } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
 import { useState } from 'react'
 import GlassCard from '../../components/GlassCard'
 import PrimaryButton from '../../components/PrimaryButton'
@@ -27,7 +27,6 @@ export default function Camera() {
 
   return (
     <View className='camera-page'>
-      {/* 顶部 */}
       <View className='camera-page__header'>
         <Text className='camera-page__close'>✕</Text>
         <Text className='camera-page__title'>拍照记录</Text>
@@ -35,15 +34,13 @@ export default function Camera() {
       </View>
 
       {!captured ? (
-        <>
-          {/* 相机区域 */}
+        <View>
           <View className='camera-page__viewfinder'>
             <View className='camera-page__frame'>
               <Text className='camera-page__guide'>将食物放入框内</Text>
             </View>
           </View>
 
-          {/* 底部控制 */}
           <View className='camera-page__controls'>
             <View className='camera-page__album'>📷</View>
             <View className='camera-page__capture' onClick={handleCapture}>
@@ -51,7 +48,7 @@ export default function Camera() {
             </View>
             <View className='camera-page__flash'>⚡</View>
           </View>
-        </>
+        </View>
       ) : !recognized ? (
         <View className='camera-page__loading'>
           <Text className='camera-page__loading-text'>正在识别...</Text>
@@ -65,11 +62,11 @@ export default function Camera() {
           <GlassCard className='camera-page__recognition'>
             <Text className='camera-page__recognition-title'>识别结果</Text>
             <Text className='camera-page__recognition-name'>{mockRecognition.name}</Text>
-            <Text className='camera-page__recognition-confidence}>
+            <Text className='camera-page__recognition-confidence'>
               置信度 {mockRecognition.confidence}%
             </Text>
 
-            <View className='camera-page__nutrition">
+            <View className='camera-page__nutrition'>
               <Text className='camera-page__nutrition-title'>营养估算</Text>
               <View className='camera-page__nutrition-grid'>
                 <View className='camera-page__nutrition-item'>

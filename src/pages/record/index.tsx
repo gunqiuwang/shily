@@ -1,6 +1,5 @@
-import { View, Text, Image } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
 import { useState } from 'react'
-import { colors } from '../../styles/tokens'
 import GlassCard from '../../components/GlassCard'
 import PrimaryButton from '../../components/PrimaryButton'
 import BottomTabBar from '../../components/BottomTabBar'
@@ -25,6 +24,13 @@ const mockRecords = [
   },
 ]
 
+const mealIcons: Record<string, string> = {
+  '早餐': '🌅',
+  '午餐': '☀️',
+  '加餐': '🍎',
+  '晚餐': '🌙',
+}
+
 export default function Record() {
   const [selectedDate] = useState(new Date())
 
@@ -37,7 +43,6 @@ export default function Record() {
 
   return (
     <View className='record-page'>
-      {/* 顶部日期选择 */}
       <View className='record-page__header'>
         <View className='record-page__date'>
           <Text className='record-page__date-text'>{formatDate(selectedDate)}</Text>
@@ -45,7 +50,6 @@ export default function Record() {
         </View>
       </View>
 
-      {/* 记录列表 */}
       <View className='record-page__list'>
         {mealTypes.map((mealType) => {
           const record = mockRecords.find((r) => r.type === mealType)
@@ -53,9 +57,7 @@ export default function Record() {
             <GlassCard key={mealType} className='record-card'>
               <View className='record-card__header'>
                 <View className='record-card__type'>
-                  <Text className='record-card__icon'>
-                    {mealType === '早餐' ? '🌅' : mealType === '午餐' ? '☀️' : mealType === '加餐' ? '🍎' : '🌙'}
-                  </Text>
+                  <Text className='record-card__icon'>{mealIcons[mealType]}</Text>
                   <Text className='record-card__type-text'>{mealType}</Text>
                 </View>
                 {record && (
@@ -64,16 +66,16 @@ export default function Record() {
               </View>
 
               {record ? (
-                <>
+                <View>
                   <View className='record-card__foods'>
                     {record.foods.map((food, idx) => (
-                      <Text key={idx} className='record-card__food">{food}</Text>
+                      <Text key={idx} className='record-card__food'>{food}</Text>
                     ))}
                   </View>
                   <View className='record-card__footer'>
                     <Text className='record-card__calories'>约 {record.calories} kcal</Text>
                   </View>
-                </>
+                </View>
               ) : (
                 <View className='record-card__empty'>
                   <Text className='record-card__empty-text'>点击添加记录</Text>
@@ -84,7 +86,6 @@ export default function Record() {
         })}
       </View>
 
-      {/* 底部按钮 */}
       <View className='record-page__footer'>
         <PrimaryButton onClick={() => wx.navigateTo({ url: '/pages/camera/index' })}>
           + 记录饮食
