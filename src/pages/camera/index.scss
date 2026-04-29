@@ -13,6 +13,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 32rpx;
+  padding-top: calc(32rpx + constant(safe-area-inset-top));
   box-sizing: border-box;
 }
 
@@ -57,6 +58,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 64rpx;
+  padding-bottom: calc(64rpx + constant(safe-area-inset-bottom));
   background: #000;
 }
 
@@ -102,6 +104,7 @@
   background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 100%);
   border-radius: 48rpx 48rpx 0 0;
   padding: 40rpx 32rpx;
+  padding-bottom: calc(40rpx + constant(safe-area-inset-bottom));
   margin-top: -40rpx;
   box-sizing: border-box;
 }

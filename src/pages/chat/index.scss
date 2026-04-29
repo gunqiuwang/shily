@@ -2,9 +2,9 @@
 .chat-page {
   width: 100%;
   min-height: 100vh;
-  padding: 32rpx;
-  padding-top: calc(env(safe-area-inset-top) + 32rpx);
-  padding-bottom: 200rpx;
+  padding: 0 32rpx;
+  padding-top: calc(80rpx + constant(safe-area-inset-top));
+  padding-bottom: 240rpx;
   box-sizing: border-box;
   background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%);
 }
@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-top: 32rpx;
 }
 
 .chat-page__back, .chat-page__settings {
@@ -69,13 +70,14 @@
 
 .chat-page__input-area {
   position: fixed;
-  bottom: 120rpx;
+  bottom: 140rpx;
   left: 0;
   right: 0;
   display: flex;
   align-items: center;
   gap: 24rpx;
   padding: 24rpx 32rpx;
+  padding-bottom: calc(24rpx + constant(safe-area-inset-bottom));
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   border-top: 1rpx solid #E8EFEA;

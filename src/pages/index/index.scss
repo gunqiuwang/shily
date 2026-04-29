@@ -2,9 +2,9 @@
 .index-page {
   width: 100%;
   min-height: 100vh;
-  padding: 32rpx;
-  padding-top: calc(env(safe-area-inset-top) + 32rpx);
-  padding-bottom: 150rpx;
+  padding: 0 32rpx;
+  padding-top: calc(80rpx + constant(safe-area-inset-top));
+  padding-bottom: 200rpx;
   box-sizing: border-box;
   background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 60%, #FFFFFF 100%);
 }
@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-top: 32rpx;
 }
 
 .index-page__header-right {
@@ -82,7 +83,7 @@
 
 .index-page__footer {
   position: fixed;
-  bottom: 120rpx;
+  bottom: 140rpx;
   left: 32rpx;
   right: 32rpx;
   width: auto;

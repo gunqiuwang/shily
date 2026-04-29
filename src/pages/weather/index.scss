@@ -2,8 +2,8 @@
 .weather-page {
   width: 100%;
   min-height: 100vh;
-  padding: 32rpx;
-  padding-top: calc(env(safe-area-inset-top) + 32rpx);
+  padding: 0 32rpx;
+  padding-top: calc(80rpx + constant(safe-area-inset-top));
   padding-bottom: 200rpx;
   box-sizing: border-box;
   background: linear-gradient(180deg, #EEF7FA 0%, #DDF5E8 50%, #F8FAF7 100%);
@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  padding-top: 32rpx;
 }
 
 .weather-page__city {
