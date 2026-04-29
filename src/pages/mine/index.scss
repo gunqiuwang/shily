@@ -1,0 +1,120 @@
+.mine-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%);
+  padding: env(safe-area-inset-top) 16px 100px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  &__avatar {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #DDF5E8 0%, #BFDCEB 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__avatar-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #5AAF7E;
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__name {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1F2D2A;
+    margin-bottom: 4px;
+  }
+
+  &__days {
+    display: block;
+    font-size: 13px;
+    color: #6B7C76;
+  }
+
+  &__vip-card {
+    background: linear-gradient(135deg, #DDF5E8 0%, #F8FAF7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__vip-content {
+    flex: 1;
+  }
+
+  &__vip-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1F2D2A;
+    margin-bottom: 4px;
+  }
+
+  &__vip-desc {
+    display: block;
+    font-size: 13px;
+    color: #6B7C76;
+  }
+
+  &__vip-btn {
+    background: #7BC89C;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  &__menu {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(59, 112, 82, 0.06);
+  }
+
+  &__menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #E8EFEA;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__menu-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__menu-icon {
+    font-size: 20px;
+  }
+
+  &__menu-label {
+    font-size: 15px;
+    color: #1F2D2A;
+  }
+
+  &__menu-arrow {
+    font-size: 20px;
+    color: #CBD5D1;
+  }
+}

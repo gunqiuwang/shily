@@ -1,0 +1,120 @@
+.reminder-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%);
+  padding: env(safe-area-inset-top) 16px 20px;
+
+  &__header {
+    padding: 16px 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1F2D2A;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  &__section-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1F2D2A;
+    margin-bottom: 12px;
+  }
+
+  &__history {
+    background: white;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 4px 16px rgba(59, 112, 82, 0.06);
+  }
+
+  &__history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #E8EFEA;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__history-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__history-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #CBD5D1;
+
+    &--done {
+      background: #7BC89C;
+    }
+  }
+
+  &__history-time {
+    font-size: 13px;
+    color: #6B7C76;
+    min-width: 40px;
+  }
+
+  &__history-title {
+    font-size: 15px;
+    color: #1F2D2A;
+  }
+
+  &__history-status {
+    font-size: 12px;
+    color: #CBD5D1;
+
+    &--done {
+      color: #7BC89C;
+    }
+  }
+}
+
+.reminder-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__icon {
+    font-size: 24px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2D2A;
+  }
+
+  &__desc {
+    font-size: 12px;
+    color: #6B7C76;
+  }
+}

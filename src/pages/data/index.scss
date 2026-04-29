@@ -1,0 +1,151 @@
+.data-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%);
+  padding: env(safe-area-inset-top) 16px 100px;
+
+  &__header {
+    padding: 16px 0;
+  }
+
+  &__tabs {
+    display: flex;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    padding: 4px;
+  }
+
+  &__tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #6B7C76;
+    transition: all 0.2s;
+
+    &--active {
+      background: #7BC89C;
+      color: white;
+      font-weight: 600;
+    }
+  }
+
+  &__score-card {
+    margin: 16px 0;
+  }
+
+  &__score-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__score-info {
+    flex: 1;
+  }
+
+  &__score-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1F2D2A;
+    margin-bottom: 4px;
+  }
+
+  &__score-desc {
+    display: block;
+    font-size: 13px;
+    color: #6B7C76;
+  }
+
+  &__section {
+    margin: 20px 0;
+  }
+
+  &__section-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    color: #1F2D2A;
+    margin-bottom: 12px;
+  }
+
+  &__lifestyle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.nutrition-card {
+  &__item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  &__label {
+    font-size: 14px;
+    color: #1F2D2A;
+    font-weight: 500;
+  }
+
+  &__value {
+    font-size: 14px;
+    color: #6B7C76;
+  }
+
+  &__bar {
+    height: 6px;
+    background: #E8EFEA;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+
+  &__bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
+
+  &__target {
+    font-size: 11px;
+    color: #A8B6B0;
+  }
+}
+
+.lifestyle-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+
+  &__icon {
+    font-size: 24px;
+  }
+
+  &__label {
+    font-size: 12px;
+    color: #6B7C76;
+  }
+
+  &__value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1F2D2A;
+
+    &--warning {
+      color: #F7B7B2;
+    }
+  }
+}

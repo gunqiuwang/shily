@@ -1,0 +1,124 @@
+.weather-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #EEF7FA 0%, #DDF5E8 50%, #F8FAF7 100%);
+  padding: env(safe-area-inset-top) 16px 20px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px 0;
+  }
+
+  &__city {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1F2D2A;
+  }
+
+  &__temp {
+    text-align: right;
+  }
+
+  &__degree {
+    display: block;
+    font-size: 48px;
+    font-weight: 300;
+    color: #1F2D2A;
+    line-height: 1;
+  }
+
+  &__condition {
+    display: block;
+    font-size: 15px;
+    color: #6B7C76;
+    text-align: right;
+  }
+
+  &__scene {
+    position: relative;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &__sun-light {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(255, 250, 240, 0.9) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  &__hills {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(180deg, #DDF5E8 0%, #BFDCEB 100%);
+    border-radius: 50% 50% 0 0;
+    opacity: 0.6;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__advice-card {
+    margin-bottom: 20px;
+  }
+
+  &__advice-header {
+    margin-bottom: 12px;
+  }
+
+  &__advice-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1F2D2A;
+  }
+
+  &__advice-text {
+    font-size: 15px;
+    color: #6B7C76;
+    line-height: 1.6;
+  }
+
+  &__suggestions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  &__suggestion-item {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__suggestion-icon {
+    font-size: 24px;
+  }
+
+  &__suggestion-label {
+    font-size: 12px;
+    color: #6B7C76;
+  }
+
+  &__suggestion-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1F2D2A;
+  }
+}
