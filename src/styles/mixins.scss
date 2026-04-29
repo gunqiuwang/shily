@@ -1,0 +1,8 @@
+// Taro upx 单位转换
+// 设计稿基于 750px 宽度（iPhone 6/7/8 尺寸）
+// 使用 upx 单位让 Taro 自动转换不同屏幕尺寸
+
+// 基础尺寸转换函数
+@function upx($size) {
+  @return $size * 1rpx;
+}

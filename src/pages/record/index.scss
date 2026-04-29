@@ -1,10 +1,10 @@
 .record-page {
   min-height: 100vh;
   background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%);
-  padding: env(safe-area-inset-top) 16px 120px;
+  padding: env(safe-area-inset-top) 16upx 120upx;
 
   &__header {
-    padding: 16px 0;
+    padding: 16upx 0;
   }
 
   &__date {
@@ -14,27 +14,27 @@
   }
 
   &__date-text {
-    font-size: 20px;
+    font-size: 20upx;
     font-weight: 600;
     color: #1F2D2A;
   }
 
   &__calendar {
-    font-size: 20px;
-    padding: 4px;
+    font-size: 20upx;
+    padding: 4upx;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 12upx;
   }
 
   &__footer {
     position: fixed;
-    bottom: 80px;
-    left: 16px;
-    right: 16px;
+    bottom: 80upx;
+    left: 16upx;
+    right: 16upx;
   }
 }
 
@@ -43,60 +43,60 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 12upx;
   }
 
   &__type {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 8upx;
   }
 
   &__icon {
-    font-size: 20px;
+    font-size: 20upx;
   }
 
   &__type-text {
-    font-size: 17px;
+    font-size: 17upx;
     font-weight: 600;
     color: #1F2D2A;
   }
 
   &__time {
-    font-size: 13px;
+    font-size: 13upx;
     color: #6B7C76;
   }
 
   &__foods {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    margin-bottom: 12px;
+    gap: 4upx;
+    margin-bottom: 12upx;
   }
 
   &__food {
-    font-size: 14px;
+    font-size: 14upx;
     color: #6B7C76;
   }
 
   &__footer {
-    padding-top: 8px;
-    border-top: 1px solid #E8EFEA;
+    padding-top: 8upx;
+    border-top: 1upx solid #E8EFEA;
   }
 
   &__calories {
-    font-size: 13px;
+    font-size: 13upx;
     color: #7BC89C;
     font-weight: 500;
   }
 
   &__empty {
-    padding: 20px;
+    padding: 20upx;
     text-align: center;
   }
 
   &__empty-text {
-    font-size: 14px;
+    font-size: 14upx;
     color: #CBD5D1;
   }
 }

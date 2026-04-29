@@ -1,7 +1,7 @@
 .chat-page {
   min-height: 100vh;
   background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%);
-  padding: env(safe-area-inset-top) 16px 160px;
+  padding: env(safe-area-inset-top) 16upx 160upx;
   display: flex;
   flex-direction: column;
 
@@ -9,16 +9,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
+    padding: 12upx 0;
   }
 
   &__back, &__settings {
-    font-size: 20px;
-    padding: 4px 8px;
+    font-size: 20upx;
+    padding: 4upx 8upx;
   }
 
   &__title {
-    font-size: 17px;
+    font-size: 17upx;
     font-weight: 600;
     color: #1F2D2A;
   }
@@ -26,79 +26,79 @@
   &__shily-status {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 12upx;
     background: rgba(255, 255, 255, 0.8);
-    padding: 12px 16px;
-    border-radius: 16px;
-    margin-bottom: 16px;
+    padding: 12upx 16upx;
+    border-radius: 16upx;
+    margin-bottom: 16upx;
   }
 
   &__shily-message {
-    font-size: 13px;
+    font-size: 13upx;
     color: #6B7C76;
     font-style: italic;
   }
 
   &__messages {
     flex: 1;
-    padding-bottom: 16px;
+    padding-bottom: 16upx;
   }
 
   &__quick-actions {
     display: flex;
-    gap: 8px;
+    gap: 8upx;
     flex-wrap: wrap;
-    padding: 12px 0;
+    padding: 12upx 0;
   }
 
   &__quick-btn {
     background: #F1F8F4;
     color: #2F6B4F;
-    padding: 8px 16px;
-    border-radius: 16px;
-    font-size: 13px;
+    padding: 8upx 16upx;
+    border-radius: 16upx;
+    font-size: 13upx;
   }
 
   &__input-area {
     position: fixed;
-    bottom: 72px;
+    bottom: 72upx;
     left: 0;
     right: 0;
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
+    gap: 12upx;
+    padding: 12upx 16upx;
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid #E8EFEA;
+    backdrop-filter: blur(10upx);
+    border-top: 1upx solid #E8EFEA;
   }
 
   &__input {
     flex: 1;
     background: #F8FAF7;
-    border-radius: 20px;
-    padding: 12px 16px;
-    font-size: 15px;
-    min-height: 44px;
+    border-radius: 20upx;
+    padding: 12upx 16upx;
+    font-size: 15upx;
+    min-height: 44upx;
   }
 
   &__send-btn {
-    width: 44px;
-    height: 44px;
+    width: 44upx;
+    height: 44upx;
     background: linear-gradient(135deg, #7BC89C 0%, #9DDFC0 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 18px;
+    font-size: 18upx;
   }
 }
 
 .message {
   display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
+  gap: 8upx;
+  margin-bottom: 16upx;
   align-items: flex-start;
 
   &--user {
@@ -106,21 +106,21 @@
 
     .message__content {
       background: #DDF5E8;
-      border-radius: 18px 18px 4px 18px;
+      border-radius: 18upx 18upx 4upx 18upx;
     }
   }
 
   &--ai {
     .message__content {
       background: rgba(255, 255, 255, 0.9);
-      border-radius: 18px 18px 18px 4px;
+      border-radius: 18upx 18upx 18upx 4upx;
     }
   }
 
   &__content {
     max-width: 70%;
-    padding: 12px 16px;
-    font-size: 15px;
+    padding: 12upx 16upx;
+    font-size: 15upx;
     line-height: 1.5;
     color: #1F2D2A;
   }

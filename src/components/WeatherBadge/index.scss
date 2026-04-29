@@ -1,20 +1,20 @@
 .weather-badge {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 24upx;
 
   &__location {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8upx;
   }
 
   &__icon {
-    font-size: 14px;
+    font-size: 28upx;
   }
 
   &__city {
-    font-size: 13px;
+    font-size: 26upx;
     color: #1F2D2A;
     font-weight: 500;
   }
@@ -22,24 +22,24 @@
   &__info {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 12upx;
     background: rgba(255, 255, 255, 0.8);
-    padding: 4px 10px;
-    border-radius: 12px;
+    padding: 8upx 20upx;
+    border-radius: 24upx;
   }
 
   &__icon-small {
-    font-size: 14px;
+    font-size: 28upx;
   }
 
   &__temp {
-    font-size: 15px;
+    font-size: 30upx;
     font-weight: 600;
     color: #1F2D2A;
   }
 
   &__weather {
-    font-size: 12px;
+    font-size: 24upx;
     color: #6B7C76;
   }
 }

@@ -1,18 +1,18 @@
 .mine-page {
   min-height: 100vh;
   background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%);
-  padding: env(safe-area-inset-top) 16px 100px;
+  padding: env(safe-area-inset-top) 16upx 100upx;
 
   &__header {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 24px 0;
+    gap: 16upx;
+    padding: 24upx 0;
   }
 
   &__avatar {
-    width: 64px;
-    height: 64px;
+    width: 64upx;
+    height: 64upx;
     background: linear-gradient(135deg, #DDF5E8 0%, #BFDCEB 100%);
     border-radius: 50%;
     display: flex;
@@ -21,7 +21,7 @@
   }
 
   &__avatar-text {
-    font-size: 24px;
+    font-size: 24upx;
     font-weight: 600;
     color: #5AAF7E;
   }
@@ -32,15 +32,15 @@
 
   &__name {
     display: block;
-    font-size: 20px;
+    font-size: 20upx;
     font-weight: 600;
     color: #1F2D2A;
-    margin-bottom: 4px;
+    margin-bottom: 4upx;
   }
 
   &__days {
     display: block;
-    font-size: 13px;
+    font-size: 13upx;
     color: #6B7C76;
   }
 
@@ -49,7 +49,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 24px;
+    margin-bottom: 24upx;
   }
 
   &__vip-content {
@@ -58,40 +58,40 @@
 
   &__vip-title {
     display: block;
-    font-size: 17px;
+    font-size: 17upx;
     font-weight: 600;
     color: #1F2D2A;
-    margin-bottom: 4px;
+    margin-bottom: 4upx;
   }
 
   &__vip-desc {
     display: block;
-    font-size: 13px;
+    font-size: 13upx;
     color: #6B7C76;
   }
 
   &__vip-btn {
     background: #7BC89C;
     color: white;
-    padding: 8px 16px;
-    border-radius: 16px;
-    font-size: 13px;
+    padding: 8upx 16upx;
+    border-radius: 16upx;
+    font-size: 13upx;
     font-weight: 500;
   }
 
   &__menu {
     background: white;
-    border-radius: 20px;
+    border-radius: 20upx;
     overflow: hidden;
-    box-shadow: 0 4px 16px rgba(59, 112, 82, 0.06);
+    box-shadow: 0 4upx 16upx rgba(59, 112, 82, 0.06);
   }
 
   &__menu-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
-    border-bottom: 1px solid #E8EFEA;
+    padding: 16upx;
+    border-bottom: 1upx solid #E8EFEA;
 
     &:last-child {
       border-bottom: none;
@@ -101,20 +101,20 @@
   &__menu-left {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 12upx;
   }
 
   &__menu-icon {
-    font-size: 20px;
+    font-size: 20upx;
   }
 
   &__menu-label {
-    font-size: 15px;
+    font-size: 15upx;
     color: #1F2D2A;
   }
 
   &__menu-arrow {
-    font-size: 20px;
+    font-size: 20upx;
     color: #CBD5D1;
   }
 }

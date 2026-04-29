@@ -5,18 +5,18 @@
   justify-content: center;
 
   &--small {
-    width: 80px;
-    height: 80px;
+    width: 160upx;
+    height: 160upx;
   }
 
   &--medium {
-    width: 120px;
-    height: 120px;
+    width: 240upx;
+    height: 240upx;
   }
 
   &--large {
-    width: 160px;
-    height: 160px;
+    width: 320upx;
+    height: 320upx;
   }
 
   &__ring {
@@ -29,7 +29,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 6px solid #E8EFEA;
+    border: 12upx solid #E8EFEA;
     border-radius: 50%;
   }
 
@@ -37,7 +37,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 6px solid transparent;
+    border: 12upx solid transparent;
     border-top-color: #7BC89C;
     border-right-color: #9DDFC0;
     border-radius: 50%;
@@ -52,15 +52,15 @@
   }
 
   &__number {
-    font-size: 32px;
+    font-size: 64upx;
     font-weight: 700;
     color: #1F2D2A;
     line-height: 1;
   }
 
   &__label {
-    font-size: 12px;
+    font-size: 24upx;
     color: #6B7C76;
-    margin-top: 4px;
+    margin-top: 8upx;
   }
 }

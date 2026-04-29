@@ -1,17 +1,17 @@
 .weather-page {
   min-height: 100vh;
   background: linear-gradient(180deg, #EEF7FA 0%, #DDF5E8 50%, #F8FAF7 100%);
-  padding: env(safe-area-inset-top) 16px 20px;
+  padding: env(safe-area-inset-top) 16upx 20upx;
 
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 16px 0;
+    padding: 16upx 0;
   }
 
   &__city {
-    font-size: 28px;
+    font-size: 28upx;
     font-weight: 700;
     color: #1F2D2A;
   }
@@ -22,7 +22,7 @@
 
   &__degree {
     display: block;
-    font-size: 48px;
+    font-size: 48upx;
     font-weight: 300;
     color: #1F2D2A;
     line-height: 1;
@@ -30,14 +30,14 @@
 
   &__condition {
     display: block;
-    font-size: 15px;
+    font-size: 15upx;
     color: #6B7C76;
     text-align: right;
   }
 
   &__scene {
     position: relative;
-    height: 280px;
+    height: 280upx;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,10 +46,10 @@
 
   &__sun-light {
     position: absolute;
-    top: 20px;
-    right: 60px;
-    width: 60px;
-    height: 60px;
+    top: 20upx;
+    right: 60upx;
+    width: 60upx;
+    height: 60upx;
     background: radial-gradient(circle, rgba(255, 250, 240, 0.9) 0%, transparent 70%);
     border-radius: 50%;
   }
@@ -59,7 +59,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 120px;
+    height: 120upx;
     background: linear-gradient(180deg, #DDF5E8 0%, #BFDCEB 100%);
     border-radius: 50% 50% 0 0;
     opacity: 0.6;
@@ -71,21 +71,21 @@
   }
 
   &__advice-card {
-    margin-bottom: 20px;
+    margin-bottom: 20upx;
   }
 
   &__advice-header {
-    margin-bottom: 12px;
+    margin-bottom: 12upx;
   }
 
   &__advice-title {
-    font-size: 17px;
+    font-size: 17upx;
     font-weight: 600;
     color: #1F2D2A;
   }
 
   &__advice-text {
-    font-size: 15px;
+    font-size: 15upx;
     color: #6B7C76;
     line-height: 1.6;
   }
@@ -93,31 +93,31 @@
   &__suggestions {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 12upx;
   }
 
   &__suggestion-item {
     background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 16px;
+    backdrop-filter: blur(10upx);
+    border-radius: 16upx;
+    padding: 16upx;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 8upx;
   }
 
   &__suggestion-icon {
-    font-size: 24px;
+    font-size: 24upx;
   }
 
   &__suggestion-label {
-    font-size: 12px;
+    font-size: 12upx;
     color: #6B7C76;
   }
 
   &__suggestion-value {
-    font-size: 15px;
+    font-size: 15upx;
     font-weight: 600;
     color: #1F2D2A;
   }

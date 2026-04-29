@@ -8,17 +8,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
+    padding: 16upx;
     color: white;
   }
 
   &__close {
-    font-size: 20px;
-    padding: 4px 8px;
+    font-size: 20upx;
+    padding: 4upx 8upx;
   }
 
   &__title {
-    font-size: 17px;
+    font-size: 17upx;
     font-weight: 600;
   }
 
@@ -31,10 +31,10 @@
   }
 
   &__frame {
-    width: 280px;
-    height: 280px;
-    border: 2px dashed rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
+    width: 280upx;
+    height: 280upx;
+    border: 2upx dashed rgba(255, 255, 255, 0.3);
+    border-radius: 20upx;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,27 +42,27 @@
 
   &__guide {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 14px;
+    font-size: 14upx;
   }
 
   &__controls {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 32px;
+    padding: 32upx;
     background: #000;
   }
 
   &__album, &__flash {
-    font-size: 28px;
+    font-size: 28upx;
     color: white;
-    padding: 8px;
+    padding: 8upx;
   }
 
   &__capture {
-    width: 72px;
-    height: 72px;
-    border: 4px solid white;
+    width: 72upx;
+    height: 72upx;
+    border: 4upx solid white;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -70,8 +70,8 @@
   }
 
   &__capture-inner {
-    width: 56px;
-    height: 56px;
+    width: 56upx;
+    height: 56upx;
     background: white;
     border-radius: 50%;
   }
@@ -86,27 +86,27 @@
 
   &__loading-text {
     color: white;
-    font-size: 16px;
+    font-size: 16upx;
   }
 
   &__result {
     flex: 1;
     background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 100%);
-    border-radius: 24px 24px 0 0;
-    padding: 20px 16px;
-    margin-top: -20px;
+    border-radius: 24upx 24upx 0 0;
+    padding: 20upx 16upx;
+    margin-top: -20upx;
   }
 
   &__image-placeholder {
     width: 100%;
-    height: 200px;
+    height: 200upx;
     background: #E8EFEA;
-    border-radius: 20px;
+    border-radius: 20upx;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 64px;
-    margin-bottom: 16px;
+    font-size: 64upx;
+    margin-bottom: 16upx;
   }
 
   &__recognition {
@@ -115,81 +115,81 @@
 
   &__recognition-title {
     display: block;
-    font-size: 13px;
+    font-size: 13upx;
     color: #6B7C76;
-    margin-bottom: 4px;
+    margin-bottom: 4upx;
   }
 
   &__recognition-name {
     display: block;
-    font-size: 20px;
+    font-size: 20upx;
     font-weight: 600;
     color: #1F2D2A;
-    margin-bottom: 4px;
+    margin-bottom: 4upx;
   }
 
   &__recognition-confidence {
     display: block;
-    font-size: 13px;
+    font-size: 13upx;
     color: #7BC89C;
-    margin-bottom: 16px;
+    margin-bottom: 16upx;
   }
 
   &__nutrition {
-    margin-bottom: 16px;
+    margin-bottom: 16upx;
   }
 
   &__nutrition-title {
     display: block;
-    font-size: 15px;
+    font-size: 15upx;
     font-weight: 600;
     color: #1F2D2A;
-    margin-bottom: 12px;
+    margin-bottom: 12upx;
   }
 
   &__nutrition-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    gap: 8upx;
   }
 
   &__nutrition-item {
     text-align: center;
     background: #F8FAF7;
-    padding: 10px 4px;
-    border-radius: 12px;
+    padding: 10upx 4upx;
+    border-radius: 12upx;
   }
 
   &__nutrition-value {
     display: block;
-    font-size: 15px;
+    font-size: 15upx;
     font-weight: 600;
     color: #1F2D2A;
   }
 
   &__nutrition-label {
     display: block;
-    font-size: 11px;
+    font-size: 11upx;
     color: #6B7C76;
-    margin-top: 2px;
+    margin-top: 2upx;
   }
 
   &__ingredients {
-    margin-bottom: 20px;
+    margin-bottom: 20upx;
   }
 
   &__ingredients-title {
     display: block;
-    font-size: 15px;
+    font-size: 15upx;
     font-weight: 600;
     color: #1F2D2A;
-    margin-bottom: 8px;
+    margin-bottom: 8upx;
   }
 
   &__ingredient {
     display: block;
-    font-size: 14px;
+    font-size: 14upx;
     color: #6B7C76;
-    padding: 4px 0;
+    padding: 4upx 0;
   }
 }

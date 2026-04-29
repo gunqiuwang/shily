@@ -1,52 +1,52 @@
 .metric-card {
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 16px;
-  box-shadow: 0 4px 16px rgba(59, 112, 82, 0.06);
-  min-width: 80px;
+  border-radius: 40upx;
+  padding: 32upx;
+  box-shadow: 0 8upx 32upx rgba(59, 112, 82, 0.06);
+  min-width: 160upx;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 16upx;
 
   &__icon {
-    font-size: 24px;
+    font-size: 48upx;
   }
 
   &__label {
-    font-size: 12px;
+    font-size: 24upx;
     color: #6B7C76;
   }
 
   &__value {
     display: flex;
     align-items: baseline;
-    gap: 2px;
+    gap: 4upx;
   }
 
   &__number {
-    font-size: 20px;
+    font-size: 40upx;
     font-weight: 600;
     color: #1F2D2A;
   }
 
   &__unit {
-    font-size: 12px;
+    font-size: 24upx;
     color: #6B7C76;
   }
 
   &__progress {
     width: 100%;
-    height: 4px;
+    height: 8upx;
     background: #E8EFEA;
-    border-radius: 2px;
+    border-radius: 4upx;
     overflow: hidden;
   }
 
   &__progress-bar {
     height: 100%;
     background: linear-gradient(90deg, #7BC89C, #9DDFC0);
-    border-radius: 2px;
+    border-radius: 4upx;
     transition: width 0.3s ease;
   }
 }
