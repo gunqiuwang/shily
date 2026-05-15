@@ -33,12 +33,12 @@ text {
 }
 
 .page-content {
-  padding: $section-gap var(--page-x) calc(var(--tab-height) + env(safe-area-inset-bottom) + 40rpx);
+  padding: $section-gap var(--page-x) calc(var(--tab-height) + 18rpx);
   box-sizing: border-box;
 }
 
 .page-content--loose {
-  padding-bottom: calc(var(--tab-height) + env(safe-area-inset-bottom) + 88rpx);
+  padding-bottom: calc(var(--tab-height) + 48rpx);
 }
 
 .card,
@@ -136,7 +136,7 @@ text {
 }
 
 .bottom-safe {
-  padding-bottom: calc(var(--tab-height) + env(safe-area-inset-bottom) + 40rpx);
+  padding-bottom: calc(var(--tab-height) + 18rpx);
 }
 
 .shily-flow-page {

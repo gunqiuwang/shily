@@ -209,8 +209,8 @@ export default function QuickLog() {
                   <AppIcon name='send' size={30} tone='deep' />
                 </View>
                 <View className='sentence-copy'>
-                  <Text className='sentence-title'>写下这餐</Text>
-                  <Text className='sentence-desc'>比如：一碗米饭、两个鸡蛋、一杯牛奶</Text>
+                  <Text className='sentence-title'>一句话，Shily 来估算</Text>
+                  <Text className='sentence-desc'>写自然一点就行，比如：一碗米饭、两个鸡蛋、一杯牛奶</Text>
                 </View>
               </View>
               <View className='sentence-input-row'>
@@ -222,6 +222,15 @@ export default function QuickLog() {
                 />
                 <View className={`sentence-action ${isEstimating ? 'sentence-action--disabled' : ''}`} onClick={handleEstimateMeal}>
                   <Text>{isEstimating ? '估算中' : '估算'}</Text>
+                </View>
+              </View>
+              <View className={`ai-estimate-strip ${mealEstimate ? 'ai-estimate-strip--hidden' : ''}`}>
+                <View className='ai-estimate-mark'>
+                  <Image className='ai-estimate-cloud' src={uiAssets.shily.state.happy} mode='aspectFit' />
+                </View>
+                <View className='ai-estimate-copy'>
+                  <Text className='ai-estimate-title'>AI 会自动拆成热量、蛋白、碳水和脂肪</Text>
+                  <Text className='ai-estimate-desc'>不用手选食材，先记大概，Shily 后面按记录给建议。</Text>
                 </View>
               </View>
             </GlassCard>
@@ -334,6 +343,23 @@ export default function QuickLog() {
           </PrimaryButton>
           <SecondaryButton onClick={handleSecondaryAction}>{mode === 'manual' && mealEstimate ? '重新写' : '先不记了'}</SecondaryButton>
         </View>
+
+        {mode === 'manual' && !mealEstimate && (
+          <View className='quick-log-tail'>
+            <View className='quick-log-tail-head'>
+              <Image className='quick-log-tail-image' src={uiAssets.shily.heart} mode='aspectFit' />
+              <View className='quick-log-tail-copy'>
+                <Text className='quick-log-tail-title'>不用写得像菜单</Text>
+                <Text className='quick-log-tail-desc'>按你平时说话写，Shily 会自己估个大概。</Text>
+              </View>
+            </View>
+            <View className='quick-log-examples'>
+              <Text className='quick-log-example'>半碗饭，一点青菜，几块鸡肉</Text>
+              <Text className='quick-log-example'>便利店饭团加无糖豆浆</Text>
+              <Text className='quick-log-example'>没怎么吃，就喝了杯牛奶</Text>
+            </View>
+          </View>
+        )}
       </View>
     </View>
   )

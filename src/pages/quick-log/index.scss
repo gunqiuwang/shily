@@ -2,6 +2,8 @@
 
 .quick-log-page {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background:
     radial-gradient(circle at 88% 10%, rgba(221, 245, 232, 0.64), transparent 260rpx),
     radial-gradient(circle at 16% 42%, rgba(244, 242, 255, 0.64), transparent 280rpx),
@@ -9,7 +11,10 @@
 }
 
 .quick-log-content {
-  padding-top: 18rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 26rpx;
   padding-bottom: calc(env(safe-area-inset-bottom) + 40rpx);
 }
 
@@ -17,7 +22,7 @@
   position: relative;
   min-height: 166rpx;
   padding: 24rpx 210rpx 24rpx 32rpx;
-  margin-bottom: 18rpx;
+  margin-bottom: 22rpx;
   overflow: hidden;
   background:
     radial-gradient(circle at 86% 42%, rgba(221, 245, 232, 0.62), transparent 170rpx),
@@ -67,7 +72,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10rpx;
-  margin-bottom: 14rpx;
+  margin-bottom: 18rpx;
 }
 
 .meal-tab {
@@ -89,9 +94,12 @@
 }
 
 .sentence-card {
-  padding: 20rpx;
+  padding: 22rpx;
   margin-bottom: 14rpx;
   border: 1rpx solid rgba(47, 107, 79, 0.10);
+  background:
+    radial-gradient(circle at 86% 18%, rgba(221, 245, 232, 0.46), transparent 160rpx),
+    rgba(255, 255, 255, 0.90);
 }
 
 .sentence-card--simple {
@@ -106,14 +114,15 @@
 }
 
 .sentence-icon {
-  width: 58rpx;
-  height: 58rpx;
+  width: 62rpx;
+  height: 62rpx;
   border-radius: $radius-pill;
-  background: $color-primary-light;
+  background: linear-gradient(135deg, $color-primary-light, rgba(238, 247, 250, 0.96));
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-shadow: 0 10rpx 24rpx rgba(123, 200, 156, 0.16);
 }
 
 .sentence-copy {
@@ -123,7 +132,7 @@
 
 .sentence-title {
   display: block;
-  font-size: 28rpx;
+  font-size: 30rpx;
   font-weight: 780;
   color: $color-text;
   line-height: 1.2;
@@ -138,29 +147,30 @@
 }
 
 .sentence-input-row {
-  min-height: 76rpx;
-  margin-top: 16rpx;
-  border-radius: 24rpx;
-  background: rgba(238, 247, 250, 0.80);
+  min-height: 84rpx;
+  margin-top: 18rpx;
+  border-radius: 28rpx;
+  background: rgba(238, 247, 250, 0.92);
   display: flex;
   align-items: center;
-  padding: 0 10rpx 0 22rpx;
+  padding: 0 10rpx 0 24rpx;
   gap: 10rpx;
+  box-shadow: inset 0 0 0 1rpx rgba(255, 255, 255, 0.72);
 }
 
 .sentence-input {
   flex: 1;
-  height: 76rpx;
+  height: 84rpx;
   font-size: 25rpx;
   color: $color-text;
 }
 
 .sentence-action {
   flex: 0 0 auto;
-  min-width: 104rpx;
-  height: 58rpx;
+  min-width: 112rpx;
+  height: 62rpx;
   border-radius: $radius-pill;
-  background: rgba(123, 200, 156, 0.24);
+  background: $color-primary-light;
   color: $color-primary-deep;
   font-size: 23rpx;
   font-weight: 760;
@@ -171,6 +181,59 @@
 
 .sentence-action--disabled {
   opacity: 0.62;
+}
+
+.ai-estimate-strip {
+  margin-top: 16rpx;
+  min-height: 86rpx;
+  padding: 12rpx 16rpx;
+  border-radius: 24rpx;
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+  background:
+    radial-gradient(circle at 6% 50%, rgba(217, 215, 255, 0.30), transparent 80rpx),
+    linear-gradient(135deg, rgba(221, 245, 232, 0.62), rgba(238, 247, 250, 0.72));
+}
+
+.ai-estimate-strip--hidden {
+  display: none;
+}
+
+.ai-estimate-mark {
+  width: 74rpx;
+  height: 62rpx;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-estimate-cloud {
+  width: 78rpx;
+  height: 62rpx;
+  display: block;
+}
+
+.ai-estimate-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.ai-estimate-title {
+  display: block;
+  font-size: 23rpx;
+  color: $color-primary-deep;
+  font-weight: 760;
+  line-height: 1.28;
+}
+
+.ai-estimate-desc {
+  display: block;
+  margin-top: 4rpx;
+  font-size: 20rpx;
+  color: $color-text-second;
+  line-height: 1.32;
 }
 
 .template-tabs {
@@ -272,10 +335,11 @@
 
 .meal-estimate-card {
   margin-top: 14rpx;
-  padding: 20rpx;
+  padding: 22rpx;
   background:
-    radial-gradient(circle at 92% 16%, rgba(191, 220, 235, 0.20), transparent 150rpx),
-    rgba(255, 255, 255, 0.88);
+    radial-gradient(circle at 92% 16%, rgba(191, 220, 235, 0.24), transparent 150rpx),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(238, 247, 250, 0.72));
+  border: 1rpx solid rgba(123, 200, 156, 0.18);
 }
 
 .meal-estimate-card--ai {
@@ -290,7 +354,7 @@
 }
 
 .estimate-title {
-  font-size: 28rpx;
+  font-size: 30rpx;
   font-weight: 780;
   color: $color-text;
 }
@@ -300,8 +364,8 @@
   height: 42rpx;
   padding: 0 16rpx;
   border-radius: $radius-pill;
-  background: $color-primary-light;
-  color: $color-primary-deep;
+  background: $color-primary;
+  color: $color-bg;
   font-size: 20rpx;
   font-weight: 720;
   display: flex;
@@ -327,13 +391,14 @@
 }
 
 .estimate-item {
-  min-height: 74rpx;
+  min-height: 82rpx;
   border-radius: 20rpx;
-  background: rgba(238, 247, 250, 0.76);
+  background: rgba(255, 255, 255, 0.70);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow: inset 0 -4rpx 0 rgba(123, 200, 156, 0.12);
 }
 
 .estimate-value {
@@ -421,12 +486,73 @@
   display: flex;
   flex-direction: column;
   gap: 14rpx;
-  margin-top: 18rpx;
+  margin-top: 22rpx;
+}
+
+.quick-log-tail {
+  margin-top: 24rpx;
+  padding: 22rpx;
+  border-radius: 30rpx;
+  background:
+    radial-gradient(circle at 92% 22%, rgba(217, 215, 255, 0.18), transparent 150rpx),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.70), rgba(238, 247, 250, 0.52));
+  border: 1rpx solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 12rpx 28rpx rgba(59, 112, 82, 0.035);
+}
+
+.quick-log-tail-head {
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+}
+
+.quick-log-tail-image {
+  width: 66rpx;
+  height: 56rpx;
+  flex-shrink: 0;
+}
+
+.quick-log-tail-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.quick-log-tail-title {
+  display: block;
+  font-size: 25rpx;
+  font-weight: 760;
+  color: $color-text;
+  line-height: 1.24;
+}
+
+.quick-log-tail-desc {
+  display: block;
+  margin-top: 4rpx;
+  font-size: 21rpx;
+  color: $color-text-second;
+  line-height: 1.32;
+}
+
+.quick-log-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+  margin-top: 16rpx;
+}
+
+.quick-log-example {
+  min-height: 48rpx;
+  padding: 0 18rpx;
+  border-radius: 16rpx;
+  background: rgba(255, 255, 255, 0.62);
+  color: $color-text-second;
+  font-size: 21rpx;
+  line-height: 48rpx;
 }
 
 @media (max-height: 720px) {
   .quick-log-content {
-    padding-top: 12rpx;
+    padding-top: 18rpx;
   }
 
   .quick-log-hero {

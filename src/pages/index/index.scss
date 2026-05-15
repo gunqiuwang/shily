@@ -9,14 +9,13 @@
 
 .home-content {
   flex: 1;
-  height: calc(100vh - 128rpx);
   min-height: 0;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   gap: 12rpx;
   padding-top: 0;
-  padding-bottom: calc(#{$tab-height} + env(safe-area-inset-bottom) + 18rpx);
+  padding-bottom: calc(#{$tab-height} + 12rpx);
 }
 
 .home-header {
@@ -260,7 +259,7 @@
 }
 
 .execution-card {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   min-height: 0;
   margin-top: 0;
   padding: 16rpx 16rpx 18rpx;
@@ -494,7 +493,7 @@
 }
 
 .home-action-wrap {
-  margin-top: 4rpx;
+  margin-top: 8rpx;
   padding-top: 0;
   flex-shrink: 0;
   display: grid;
@@ -532,7 +531,7 @@
 @media (max-height: 720px) {
   .home-content {
     gap: 9rpx;
-    padding-bottom: calc(#{$tab-height} + env(safe-area-inset-bottom) + 16rpx);
+    padding-bottom: calc(#{$tab-height} + 16rpx);
   }
 
   .home-header {

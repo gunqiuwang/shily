@@ -21,9 +21,22 @@ function getCurrentRoute() {
   return pages[pages.length - 1]?.route || ''
 }
 
+function getSafeBottomRpx() {
+  try {
+    const info = wx.getWindowInfo ? wx.getWindowInfo() as any : undefined
+    if (!info?.windowWidth || !info.safeArea?.bottom || !info.screenHeight) return 0
+    const bottomPx = Math.max(0, info.screenHeight - info.safeArea.bottom)
+    const bottomRpx = Math.round((bottomPx * 750) / info.windowWidth)
+    return Math.min(34, bottomRpx)
+  } catch {
+    return 0
+  }
+}
+
 export default function BottomTabBar() {
   const currentRoute = getCurrentRoute()
   const activeKey = tabs.find((tab) => tab.route === currentRoute)?.key
+  const safeBottom = getSafeBottomRpx()
 
   const handleTap = (tab: TabItem) => {
     if (tab.route === currentRoute) return
@@ -31,7 +44,7 @@ export default function BottomTabBar() {
   }
 
   return (
-    <View className='bottom-tab'>
+    <View className='bottom-tab' style={{ '--safe-bottom': `${safeBottom}rpx` } as any}>
       <View className='bottom-tab__inner'>
         {tabs.map((tab) => {
           const isActive = activeKey === tab.key

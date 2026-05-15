@@ -129,21 +129,22 @@ export default function Mine() {
             </View>
             <View className='brand-copy'>
               <Text className='brand-title'>Shily 使用范围</Text>
-              <Text className='brand-footnote'>Shily 会根据你的记录，帮你整理下一餐、喝水、蛋白和节律重点。建议只用于日常参考，不替代医生、营养师或药品说明。</Text>
+              <Text className='brand-footnote'>根据你的方案、记录和今日状态，整理下一餐、喝水、蛋白和节律重点。</Text>
+              <Text className='brand-footnote'>GLP-1/GIP 用户仅作日常饮食支持参考，不替代医生、营养师或药品说明，不做诊断。</Text>
             </View>
           </View>
           <View className='brand-tags'>
             <View className='brand-tag'>
               <AppIcon name='notebook' size={22} tone='active' />
-              <Text>记录</Text>
+              <Text>记录参考</Text>
             </View>
             <View className='brand-tag'>
               <AppIcon name='cloud' size={22} tone='active' />
-              <Text>建议</Text>
+              <Text>饮食建议</Text>
             </View>
             <View className='brand-tag'>
               <AppIcon name='settings' size={22} tone='active' />
-              <Text>非诊疗</Text>
+              <Text>GLP-1支持</Text>
             </View>
           </View>
         </View>

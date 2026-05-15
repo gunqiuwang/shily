@@ -5,8 +5,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: calc(#{$tab-height} + env(safe-area-inset-bottom));
-  padding: 0 $page-padding env(safe-area-inset-bottom);
+  --safe-bottom: 0rpx;
+  height: calc(#{$tab-height} + var(--safe-bottom));
+  padding: 0 $page-padding var(--safe-bottom);
   background: $color-bg;
   backdrop-filter: blur(20rpx);
   border-top: 1rpx solid $color-border;
