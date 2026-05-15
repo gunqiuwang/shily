@@ -1,0 +1,105 @@
+@use '../../styles/tokens.scss' as *;
+
+.custom-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: $color-bg;
+  backdrop-filter: blur(18rpx);
+  z-index: 100;
+  box-sizing: border-box;
+  transition:
+    background $motion-base,
+    backdrop-filter $motion-base;
+}
+
+.custom-nav--transparent {
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.custom-nav-spacer {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-width: 56rpx;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-right {
+  justify-content: flex-end;
+  gap: 8rpx;
+}
+
+.nav-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: $radius-pill;
+  transition:
+    transform $motion-fast,
+    background $motion-base;
+}
+
+.nav-back:active {
+  transform: scale($press-scale);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.nav-back-icon {
+  font-size: 52rpx;
+  color: $color-text;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.nav-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 360rpx;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 34rpx;
+  font-weight: 700;
+  color: $color-text;
+  line-height: 1.25;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64rpx;
+  height: 64rpx;
+  border-radius: $radius-pill;
+  color: $color-text-second;
+  font-size: 34rpx;
+  transition:
+    transform $motion-fast,
+    background $motion-base;
+}
+
+.nav-icon:active {
+  transform: scale($press-scale);
+  background: rgba(255, 255, 255, 0.58);
+}

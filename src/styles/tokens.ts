@@ -1,54 +1,34 @@
 export const colors = {
   bg: '#F8FAF7',
-  bgGradient: 'linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%)',
+  bgSoft: '#F3FAF5',
   primary: '#7BC89C',
   primaryLight: '#DDF5E8',
-  primaryDark: '#5AAF7E',
-  secondary: '#BFDCEB',
-  secondaryLight: '#EEF7FA',
+  primaryDeep: '#2F6B4F',
+  blueSoft: '#BFDCEB',
+  blueLight: '#EEF7FA',
   shily: '#D9D7FF',
   shilyLight: '#F4F2FF',
   coral: '#F7B7B2',
   text: '#1F2D2A',
-  textSecondary: '#6B7C76',
-  card: '#FFFFFF',
-  cardGlass: 'rgba(255, 255, 255, 0.82)',
-  cardGlassBorder: 'rgba(255, 255, 255, 0.65)',
-  border: '#E8EFEA',
-  disabled: '#CBD5D1',
-  tabInactive: '#A8B6B0',
-  white: '#FFFFFF',
-}
-
-export const radius = {
-  sm: 12,
-  md: 16,
-  lg: 20,
-  xl: 24,
-  xxl: 28,
+  textSecond: '#6B7C76',
+  textThird: '#9AA8A2',
+  card: 'rgba(255,255,255,0.88)',
+  border: 'rgba(255,255,255,0.72)',
 }
 
 export const shadow = {
-  card: '0 12px 32px rgba(59, 112, 82, 0.08)',
-  button: '0 8px 20px rgba(123, 200, 156, 0.28)',
-  tab: '0 -8px 24px rgba(59, 112, 82, 0.06)',
-  glass: '0 8px 32px rgba(59, 112, 82, 0.12)',
+  card: '0 16rpx 40rpx rgba(59,112,82,0.08)',
+  soft: '0 8rpx 24rpx rgba(59,112,82,0.06)',
+  button: '0 12rpx 28rpx rgba(123,200,156,0.28)',
+}
+
+export const radius = {
+  card: '32rpx',
+  large: '40rpx',
+  pill: '999rpx',
 }
 
 export const spacing = {
-  xs: 8,
-  sm: 12,
-  md: 16,
-  lg: 20,
-  xl: 24,
-  xxl: 32,
-}
-
-export const fontSize = {
-  caption: 12,
-  secondary: 13,
-  body: 15,
-  cardTitle: 17,
-  pageTitle: 20,
-  title: 24,
+  pagePadding: '32rpx',
+  sectionGap: '28rpx',
 }

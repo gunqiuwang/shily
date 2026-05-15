@@ -1,0 +1,46 @@
+@use '../../styles/tokens.scss' as *;
+
+.pill-button {
+  min-height: 72rpx;
+  padding: 0 26rpx;
+  border-radius: $radius-pill;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rpx;
+  color: $color-primary-deep;
+  font-size: 26rpx;
+  font-weight: 700;
+  border: 1rpx solid $color-border;
+  box-sizing: border-box;
+  transition:
+    transform $motion-fast,
+    opacity $motion-fast,
+    background $motion-base,
+    border-color $motion-base;
+}
+
+.pill-button:active {
+  transform: scale($press-scale);
+}
+
+.pill-button--mint {
+  background: $color-primary-light;
+}
+
+.pill-button--blue {
+  background: $color-blue-light;
+}
+
+.pill-button--white {
+  background: $color-card;
+  box-shadow: $shadow-soft;
+}
+
+.pill-button__icon {
+  flex-shrink: 0;
+}
+
+.pill-button__text {
+  line-height: 1.25;
+}

@@ -1,14 +1,55 @@
-// 次按钮
+@use '../../styles/tokens.scss' as *;
+
 .secondary-button {
-  width: 100%;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #F1F8F4;
-  color: #2F6B4F;
-  border-radius: 36rpx;
-  padding: 24rpx 48rpx;
-  font-size: 30rpx;
-  font-weight: 500;
+  gap: 10rpx;
+  background: $color-primary-light;
+  color: $color-primary-deep;
+  border: 1rpx solid $color-border;
+  border-radius: $radius-pill;
+  font-weight: 700;
   box-sizing: border-box;
+  transition:
+    transform $motion-fast,
+    opacity $motion-fast,
+    background $motion-base;
+}
+
+.secondary-button:active {
+  transform: scale($press-scale);
+}
+
+.secondary-button--full {
+  width: 100%;
+}
+
+.secondary-button--medium {
+  min-height: 72rpx;
+  padding: 0 26rpx;
+  font-size: 26rpx;
+}
+
+.secondary-button--large {
+  min-height: 84rpx;
+  padding: 0 32rpx;
+  font-size: 28rpx;
+}
+
+.secondary-button__icon {
+  flex-shrink: 0;
+}
+
+.secondary-button__text {
+  line-height: 1.25;
+}
+
+.secondary-button--disabled {
+  opacity: 0.58;
+}
+
+.secondary-button--disabled:active {
+  transform: none;
 }

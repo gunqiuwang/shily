@@ -1,21 +1,59 @@
-// 主按钮
+@use '../../styles/tokens.scss' as *;
+
 .primary-button {
-  width: 100%;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #7BC89C 0%, #9DDFC0 100%);
-  color: #FFFFFF;
-  border-radius: 44rpx;
-  box-shadow: 0 16rpx 40rpx rgba(123, 200, 156, 0.28);
-  padding: 32rpx;
-  font-size: 32rpx;
-  font-weight: 600;
+  gap: 12rpx;
+  background: $gradient-primary;
+  color: $color-bg;
+  border-radius: $radius-card;
+  box-shadow: $shadow-button;
+  font-weight: 700;
   box-sizing: border-box;
+  transition:
+    transform $motion-fast,
+    opacity $motion-fast,
+    box-shadow $motion-base;
+}
+
+.primary-button:active {
+  transform: scale($press-scale);
+  box-shadow: 0 8rpx 22rpx rgba(123, 200, 156, 0.22);
+}
+
+.primary-button--full {
+  width: 100%;
+}
+
+.primary-button--medium {
+  min-height: 80rpx;
+  padding: 0 28rpx;
+  font-size: 27rpx;
+}
+
+.primary-button--large {
+  min-height: 92rpx;
+  padding: 0 32rpx;
+  font-size: 30rpx;
+}
+
+.primary-button__icon {
+  flex-shrink: 0;
+}
+
+.primary-button__text {
+  line-height: 1.25;
 }
 
 .primary-button--disabled {
-  background: #CBD5D1;
+  background: $color-border;
   box-shadow: none;
-  color: #A8B6B0;
+  color: $color-text-second;
+  opacity: 0.76;
+}
+
+.primary-button--disabled:active {
+  transform: none;
 }

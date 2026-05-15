@@ -1,0 +1,53 @@
+@use '../../styles/tokens.scss' as *;
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: $radius-pill;
+  box-sizing: border-box;
+  transition:
+    transform $motion-fast,
+    opacity $motion-fast,
+    background $motion-base,
+    box-shadow $motion-base;
+}
+
+.icon-button:active {
+  transform: scale($press-scale);
+}
+
+.icon-button--small {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.icon-button--medium {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.icon-button--large {
+  width: 96rpx;
+  height: 96rpx;
+}
+
+.icon-button--plain {
+  background: transparent;
+}
+
+.icon-button--soft {
+  background: $color-card;
+  border: 1rpx solid $color-border;
+  box-shadow: $shadow-soft;
+}
+
+.icon-button--primary {
+  background: $gradient-primary;
+  box-shadow: $shadow-button;
+}
+
+.icon-button--dark {
+  background: rgba(31, 45, 42, 0.86);
+}

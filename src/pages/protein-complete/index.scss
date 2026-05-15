@@ -1,0 +1,26 @@
+@use '../../styles/tokens.scss' as *;
+
+.protein-complete-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 24%, rgba(221, 245, 232, 0.72), transparent 320rpx),
+    radial-gradient(circle at 48% 40%, rgba(217, 215, 255, 0.20), transparent 280rpx),
+    $color-bg;
+}
+
+.protein-complete-content {
+  min-height: calc(100vh - 180rpx);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 72rpx);
+}
+
+.complete-card {
+  padding: 34rpx;
+  text-align: center;
+}
+
+.complete-primary-wrap {
+  margin-top: 28rpx;
+}

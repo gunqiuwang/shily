@@ -1,0 +1,111 @@
+@use '../../styles/tokens.scss' as *;
+
+.protein-confirm-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 78% 10%, rgba(221, 245, 232, 0.62), transparent 260rpx),
+    $color-bg;
+}
+
+.protein-confirm-content {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 52rpx);
+}
+
+.confirm-shily {
+  min-height: 260rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-card {
+  padding: 32rpx;
+}
+
+.confirm-kicker {
+  display: block;
+  font-size: 24rpx;
+  color: $color-primary-deep;
+  font-weight: 720;
+}
+
+.confirm-title {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 42rpx;
+  color: $color-text;
+  font-weight: 820;
+}
+
+.confirm-foods {
+  display: flex;
+  flex-direction: column;
+  gap: 14rpx;
+  margin-top: 28rpx;
+}
+
+.confirm-food {
+  padding: 22rpx 24rpx;
+  border-radius: 28rpx;
+  background: $color-bg-soft;
+  color: $color-text;
+  font-size: 28rpx;
+  font-weight: 650;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.confirm-food-name {
+  display: block;
+  font-size: 28rpx;
+  color: $color-text;
+  font-weight: 700;
+}
+
+.confirm-food-amount {
+  display: block;
+  margin-top: 6rpx;
+  font-size: 23rpx;
+  color: $color-text-second;
+}
+
+.confirm-stepper {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.confirm-stepper-btn {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: $radius-pill;
+  background: $color-card;
+  color: $color-primary-deep;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-weight: 760;
+  box-shadow: $shadow-soft;
+}
+
+.confirm-stepper-btn:active {
+  transform: scale($press-scale);
+}
+
+.confirm-protein {
+  display: inline-flex;
+  margin-top: 26rpx;
+  padding: 10rpx 18rpx;
+  border-radius: $radius-pill;
+  background: $color-primary-light;
+  color: $color-primary-deep;
+  font-size: 23rpx;
+  font-weight: 700;
+}
+
+.confirm-primary-wrap {
+  margin-top: 28rpx;
+}

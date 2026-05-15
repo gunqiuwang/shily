@@ -1,0 +1,101 @@
+@use '../../styles/tokens.scss' as *;
+
+.settings-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 84% 10%, rgba(221, 245, 232, 0.62), transparent 260rpx),
+    radial-gradient(circle at 20% 34%, rgba(244, 242, 255, 0.55), transparent 280rpx),
+    $color-bg;
+}
+
+.settings-content {
+  padding-top: 24rpx;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 52rpx);
+}
+
+.settings-card {
+  position: relative;
+  margin-bottom: 18rpx;
+  padding: 26rpx;
+  overflow: hidden;
+}
+
+.settings-card-illustration {
+  position: absolute;
+  right: 22rpx;
+  top: 18rpx;
+  width: 96rpx;
+  height: 96rpx;
+  opacity: 0.92;
+  filter: drop-shadow(0 12rpx 22rpx rgba(112, 165, 194, 0.12));
+  pointer-events: none;
+}
+
+.settings-card-illustration--hero {
+  width: 128rpx;
+  height: 106rpx;
+}
+
+.settings-kicker {
+  display: block;
+  font-size: 24rpx;
+  color: $color-primary-deep;
+  font-weight: 760;
+}
+
+.settings-title {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 34rpx;
+  color: $color-text;
+  font-weight: 800;
+}
+
+.settings-desc {
+  display: block;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: $color-text-second;
+  line-height: 1.48;
+}
+
+.settings-input {
+  margin-top: 20rpx;
+  height: 84rpx;
+  padding: 0 24rpx;
+  border-radius: 28rpx;
+  background: rgba(255, 255, 255, 0.72);
+  color: $color-text;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+.settings-picker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14rpx;
+  margin-top: 14rpx;
+}
+
+.settings-picker {
+  min-height: 82rpx;
+  padding: 0 22rpx;
+  border-radius: 28rpx;
+  background: rgba(255, 255, 255, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14rpx;
+  color: $color-text;
+  font-size: 25rpx;
+  box-sizing: border-box;
+}
+
+.settings-picker--full {
+  margin: 14rpx 0 22rpx;
+}
+
+.risk-card--high,
+.risk-card--caution {
+  background: linear-gradient(135deg, rgba(247, 183, 178, 0.16), rgba(255, 255, 255, 0.86));
+}

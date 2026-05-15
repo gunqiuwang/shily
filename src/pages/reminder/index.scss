@@ -1,134 +1,156 @@
-// 提醒页面
+@use '../../styles/tokens.scss' as *;
+
 .reminder-page {
-  width: 100%;
   min-height: 100vh;
-  padding: 0 32rpx;
-  padding-top: calc(80rpx + constant(safe-area-inset-top));
-  padding-bottom: 200rpx;
-  box-sizing: border-box;
-  background: linear-gradient(180deg, #F6FBF7 0%, #F8FAF7 45%, #FFFFFF 100%);
-}
-
-.reminder-page__header {
-  width: 100%;
-  padding-top: 32rpx;
-  margin-bottom: 32rpx;
-}
-
-.reminder-page__title {
-  font-size: 48rpx;
-  font-weight: 600;
-  color: #1F2D2A;
-}
-
-.reminder-page__list {
   display: flex;
   flex-direction: column;
-  gap: 24rpx;
-  width: 100%;
-  margin-bottom: 48rpx;
+  background: $color-bg;
 }
 
-.reminder-page__section-title {
+.reminder-page .page-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: calc(#{$tab-height} + env(safe-area-inset-bottom) + 18rpx);
+}
+
+.strategy-card {
+  margin-bottom: 22rpx;
+  padding: 24rpx 28rpx;
+}
+
+.strategy-label {
   display: block;
-  font-size: 34rpx;
-  font-weight: 600;
-  color: #1F2D2A;
-  margin-bottom: 24rpx;
+  font-size: 22rpx;
+  color: $color-primary-deep;
+  font-weight: 720;
 }
 
-.reminder-page__history {
-  width: 100%;
-  background: white;
-  border-radius: 32rpx;
-  padding: 32rpx;
-  box-shadow: 0 8rpx 32rpx rgba(59, 112, 82, 0.06);
-  box-sizing: border-box;
+.strategy-title {
+  display: block;
+  margin-top: 8rpx;
+  font-size: 32rpx;
+  font-weight: 780;
+  color: $color-text;
 }
 
-.reminder-page__history-item {
+.strategy-desc {
+  display: block;
+  margin-top: 8rpx;
+  font-size: 23rpx;
+  color: $color-text-second;
+  line-height: 1.45;
+}
+
+.reminder-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24rpx 0;
-  border-bottom: 1rpx solid #E8EFEA;
-}
-
-.reminder-page__history-item:last-child {
-  border-bottom: none;
-}
-
-.reminder-page__history-left {
-  display: flex;
-  align-items: center;
-  gap: 24rpx;
-}
-
-.reminder-page__history-dot {
-  width: 16rpx;
-  height: 16rpx;
-  border-radius: 50%;
-  background: #CBD5D1;
-}
-
-.reminder-page__history-dot--done {
-  background: #7BC89C;
-}
-
-.reminder-page__history-time {
-  font-size: 26rpx;
-  color: #6B7C76;
-  min-width: 80rpx;
-}
-
-.reminder-page__history-title {
-  font-size: 30rpx;
-  color: #1F2D2A;
-}
-
-.reminder-page__history-status {
-  font-size: 24rpx;
-  color: #CBD5D1;
-}
-
-.reminder-page__history-status--done {
-  color: #7BC89C;
+  flex-direction: column;
+  gap: 14rpx;
+  margin-bottom: 22rpx;
 }
 
 .reminder-item {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 32rpx;
-  background: rgba(255, 255, 255, 0.86);
-  border-radius: 32rpx;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-.reminder-item__left {
-  display: flex;
   align-items: center;
   gap: 24rpx;
 }
 
-.reminder-item__icon {
-  font-size: 48rpx;
+.reminder-left {
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  min-width: 0;
 }
 
-.reminder-item__info {
+.reminder-icon {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: $radius-pill;
+  background: $color-primary-light;
+  color: $color-primary-deep;
+  font-size: 24rpx;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.reminder-info {
   display: flex;
   flex-direction: column;
   gap: 4rpx;
+  min-width: 0;
 }
 
-.reminder-item__label {
-  font-size: 32rpx;
-  font-weight: 600;
-  color: #1F2D2A;
+.reminder-label,
+.history-title {
+  font-size: 28rpx;
+  font-weight: 650;
+  color: $color-text;
 }
 
-.reminder-item__desc {
-  font-size: 24rpx;
-  color: #6B7C76;
+.reminder-desc,
+.history-time {
+  font-size: 22rpx;
+  color: $color-text-second;
+}
+
+.section-title {
+  margin: 0 0 20rpx;
+}
+
+.history-list {
+  margin-top: auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20rpx;
+  padding: 24rpx 28rpx;
+  border-bottom: 1rpx solid $color-border;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-left {
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  min-width: 0;
+}
+
+.history-dot {
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: $radius-pill;
+  background: $color-border;
+  flex-shrink: 0;
+}
+
+.history-dot.done {
+  background: $color-primary;
+}
+
+.history-time {
+  min-width: 72rpx;
+}
+
+.history-status {
+  font-size: 22rpx;
+  color: $color-text-second;
+  flex-shrink: 0;
+}
+
+.history-status.done {
+  color: $color-primary-deep;
 }

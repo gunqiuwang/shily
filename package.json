@@ -1,10 +1,12 @@
 {
   "name": "shily",
   "version": "1.0.0",
-  "description": "食律 Shily - AI 饮食与生活节奏管理助手",
+  "description": "食律 Shily - AI 饮食与生活节律管理助手",
   "template": "react",
   "scripts": {
     "dev:weapp": "taro build --type weapp --watch",
+    "dev:deepseek-proxy": "node tools/deepseek-proxy.mjs",
+    "icons:generate": "node tools/generate-lucide-png-icons.mjs",
     "dev:h5": "taro build --type h5 --watch",
     "build:weapp": "taro build --type weapp",
     "build:h5": "taro build --type h5"
@@ -23,9 +25,11 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.29.0",
+    "@resvg/resvg-js": "^2.6.2",
     "@tarojs/cli": "^4.2.0",
     "@types/react": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "lucide-static": "^1.14.0",
     "typescript": "^5.4.5",
     "vite": "^4.5.3"
   }

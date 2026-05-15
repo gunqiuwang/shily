@@ -5,5 +5,5 @@ import App from './app'
 const container = document.getElementById('app')
 if (container) {
   const root = createRoot(container)
-  root.render(<App />)
+  root.render(React.createElement(App))
 }

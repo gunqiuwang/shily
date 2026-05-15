@@ -1,0 +1,53 @@
+@use '../../styles/tokens.scss' as *;
+
+.shily-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28rpx;
+}
+
+.shily-success__avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.shily-success__copy {
+  width: 100%;
+  text-align: center;
+  animation: shilySuccessCopyIn 350ms cubic-bezier(0.22, 1, 0.36, 1) 150ms both;
+}
+
+.shily-success__title {
+  display: block;
+  font-size: 40rpx;
+  color: $color-text;
+  font-weight: 820;
+}
+
+.shily-success__message {
+  display: block;
+  margin-top: 18rpx;
+  font-size: 27rpx;
+  line-height: 1.62;
+  color: $color-text-second;
+  white-space: pre-line;
+}
+
+@keyframes shilySuccessCopyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8rpx);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shily-success__copy {
+    animation-duration: 1ms;
+    animation-delay: 0ms;
+  }
+}

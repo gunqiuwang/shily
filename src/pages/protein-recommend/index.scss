@@ -1,0 +1,120 @@
+@use '../../styles/tokens.scss' as *;
+
+.protein-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 78% 8%, rgba(221, 245, 232, 0.64), transparent 260rpx),
+    radial-gradient(circle at 18% 32%, rgba(191, 220, 235, 0.16), transparent 260rpx),
+    $color-bg;
+}
+
+.protein-content {
+  padding-bottom: calc(env(safe-area-inset-bottom) + 188rpx);
+}
+
+.protein-hero {
+  min-height: 270rpx;
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.protein-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.protein-kicker {
+  display: block;
+  font-size: 25rpx;
+  color: $color-primary-deep;
+  font-weight: 720;
+}
+
+.protein-title {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 38rpx;
+  line-height: 1.25;
+  color: $color-text;
+  font-weight: 820;
+}
+
+.protein-options {
+  display: flex;
+  flex-direction: column;
+  gap: 18rpx;
+}
+
+.protein-option {
+  min-height: 148rpx;
+  padding: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rpx;
+  transition:
+    transform $motion-fast,
+    border-color $motion-base,
+    box-shadow $motion-base;
+}
+
+.protein-option:active {
+  transform: scale($press-scale);
+}
+
+.protein-option--active {
+  border-color: rgba(123, 200, 156, 0.42);
+  box-shadow: $shadow-card;
+  background:
+    radial-gradient(circle at 88% 50%, rgba(221, 245, 232, 0.32), transparent 120rpx),
+    $color-card;
+}
+
+.protein-option-title {
+  display: block;
+  font-size: 31rpx;
+  color: $color-text;
+  font-weight: 760;
+}
+
+.protein-option-desc {
+  display: block;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: $color-text-second;
+}
+
+.protein-option-side {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10rpx;
+}
+
+.protein-option-value {
+  padding: 10rpx 18rpx;
+  border-radius: $radius-pill;
+  background: $color-primary-light;
+  color: $color-primary-deep;
+  font-size: 22rpx;
+  font-weight: 700;
+}
+
+.protein-option-selected {
+  padding: 6rpx 14rpx;
+  border-radius: $radius-pill;
+  background: $color-primary;
+  color: $color-bg;
+  font-size: 20rpx;
+  font-weight: 700;
+}
+
+.protein-primary-wrap {
+  position: fixed;
+  left: $page-padding;
+  right: $page-padding;
+  bottom: calc(env(safe-area-inset-bottom) + 38rpx);
+  z-index: 80;
+}

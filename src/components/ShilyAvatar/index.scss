@@ -1,82 +1,210 @@
-// Shily 头像组件
+@use '../../styles/tokens.scss' as *;
+
 .shily-avatar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16rpx;
-}
-
-.shily-avatar--small .shily-body {
-  width: 96rpx;
-  height: 96rpx;
-}
-
-.shily-avatar--medium .shily-body {
-  width: 160rpx;
-  height: 160rpx;
-}
-
-.shily-avatar--large .shily-body {
-  width: 260rpx;
-  height: 260rpx;
-}
-
-.shily-body {
   position: relative;
+  width: 300rpx;
+  height: 300rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  animation: shilyFloat var(--shily-duration, 5.2s) ease-in-out infinite;
+}
+
+.shily-stage {
+  position: relative;
+  z-index: 2;
+  width: var(--shily-image-w, 220rpx);
+  height: var(--shily-image-h, 160rpx);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: shilyBreath var(--shily-duration, 5.2s) ease-in-out infinite;
+  overflow: visible;
+}
+
+.shily-image {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #D9D7FF 0%, #E8E6FF 50%, #F4F2FF 100%);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  box-shadow:
-    0 16rpx 48rpx rgba(217, 215, 255, 0.4),
-    inset 0 -16rpx 32rpx rgba(217, 215, 255, 0.3),
-    inset 0 16rpx 32rpx rgba(255, 255, 255, 0.6);
-  animation: shilyFloat 4.8s ease-in-out infinite;
+  opacity: var(--shily-opacity, 0.98);
+  transform: scale(var(--shily-layer-scale, var(--shily-asset-scale, 1)));
+  transform-origin: center center;
+  filter:
+    brightness(var(--shily-brightness, 1))
+    saturate(var(--shily-saturation, 1.02))
+    blur(var(--shily-blur, 0))
+    drop-shadow(0 12rpx 26rpx rgba(126, 156, 199, 0.16));
 }
 
-.shily-highlight {
-  position: absolute;
-  top: 20%;
-  left: 25%;
-  width: 30%;
-  height: 25%;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  filter: blur(8rpx);
+.shily-image--previous {
+  animation: shilyMoodFadeOut $motion-shily forwards;
 }
 
-.shily-eye {
+.shily-image--current {
+  animation: shilyMoodFadeIn $motion-slow forwards;
+}
+
+.shily-glow {
   position: absolute;
-  width: 12rpx;
-  height: 12rpx;
-  background: #6B7C76;
-  border-radius: 50%;
-  top: 40%;
+  inset: 15% 10% 18%;
+  border-radius: $radius-pill;
+  background:
+    radial-gradient(circle at 52% 58%, rgba(191, 220, 235, 0.18), transparent 58%),
+    radial-gradient(circle at 40% 36%, rgba(217, 215, 255, 0.16), transparent 48%);
+  filter: blur(18rpx);
+  opacity: 0.56;
+  transition:
+    opacity $motion-base,
+    transform $motion-base;
+}
 
-  &--left {
-    left: 28%;
-  }
+.shily-shadow {
+  position: absolute;
+  left: 50%;
+  bottom: 16%;
+  width: 52%;
+  height: 7%;
+  margin-left: -26%;
+  border-radius: $radius-pill;
+  background: rgba(59, 112, 82, 0.08);
+  filter: blur(14rpx);
+  opacity: 0.38;
+}
 
-  &--right {
-    right: 28%;
-  }
+.shily-small .shily-glow {
+  inset: 12% 8% 16%;
+  filter: blur(12rpx);
+  opacity: 0.42;
+}
+
+.shily-medium .shily-glow {
+  opacity: 0.48;
+}
+
+.shily-large .shily-glow {
+  opacity: 0.62;
+}
+
+.shily-score {
+  position: absolute;
+  right: 12%;
+  bottom: 13%;
+  z-index: 3;
+  min-width: 48rpx;
+  height: 48rpx;
+  padding: 0 10rpx;
+  border-radius: $radius-pill;
+  background: $color-card;
+  color: $color-primary-deep;
+  font-size: 22rpx;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $shadow-soft;
 }
 
 .shily-message {
-  font-size: 24rpx;
-  color: #6B7C76;
+  position: absolute;
+  top: 100%;
+  margin-top: 14rpx;
+  max-width: 320rpx;
   text-align: center;
-  max-width: 240rpx;
+  color: $color-text-second;
+  font-size: 24rpx;
+  line-height: 1.45;
+}
+
+.shily-status-thinking .shily-glow {
+  opacity: 0.62;
+  transform: scale(0.98);
+}
+
+.shily-status-cheer .shily-glow,
+.shily-status-encourage .shily-glow {
+  opacity: 0.66;
+  transform: scale(1.02);
+}
+
+.shily-status-tired .shily-glow {
+  opacity: 0.56;
+}
+
+.shily-status-tired .shily-image {
+  filter: brightness(0.96) saturate(0.9) blur(var(--shily-blur, 0));
 }
 
 @keyframes shilyFloat {
-  0% {
+  0%,
+  100% {
     transform: translateY(0) scale(1);
   }
   50% {
-    transform: translateY(-12rpx) scale(1.025);
+    transform: translateY(var(--shily-motion-y, -4rpx)) scale(var(--shily-motion-scale, 1.01));
+  }
+}
+
+@keyframes shilyBreath {
+  0%,
+  100% {
+    transform: scale(var(--shily-scale, 1));
+  }
+  50% {
+    transform: scale(calc(var(--shily-scale, 1) * 1.015));
+  }
+}
+
+@keyframes shilyMoodFadeIn {
+  0% {
+    opacity: 0;
   }
   100% {
+    opacity: var(--shily-opacity, 0.98);
+  }
+}
+
+@keyframes shilyMoodFadeOut {
+  0% {
+    opacity: var(--shily-opacity, 0.98);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.shily-motion-success {
+  animation: shilySuccessLift 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.shily-motion-success .shily-glow {
+  opacity: 0.72;
+  transform: scale(1.04);
+}
+
+@keyframes shilySuccessLift {
+  0% {
     transform: translateY(0) scale(1);
+    opacity: 0.92;
+  }
+  55% {
+    transform: translateY(-10rpx) scale(1.045);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-6rpx) scale(1.02);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shily-avatar,
+  .shily-stage,
+  .shily-motion-success,
+  .shily-image--previous,
+  .shily-image--current {
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
   }
 }

@@ -1,0 +1,72 @@
+$color-bg: #F8FAF7;
+$color-bg-soft: #F3FAF5;
+
+$color-primary: #7BC89C;
+$color-primary-light: #DDF5E8;
+$color-primary-deep: #2F6B4F;
+
+$color-blue-soft: #BFDCEB;
+$color-blue-light: #EEF7FA;
+
+$color-shily: #D9D7FF;
+$color-shily-light: #F4F2FF;
+
+$color-coral: #F7B7B2;
+
+$color-text: #1F2D2A;
+$color-text-second: #6B7C76;
+$color-text-third: #9AA8A2;
+
+$color-card: rgba(255, 255, 255, 0.88);
+$color-border: rgba(255, 255, 255, 0.72);
+
+$shadow-card: 0 16rpx 40rpx rgba(59, 112, 82, 0.08);
+$shadow-soft: 0 8rpx 24rpx rgba(59, 112, 82, 0.06);
+$shadow-button: 0 12rpx 28rpx rgba(123, 200, 156, 0.28);
+
+$radius-card: 32rpx;
+$radius-large: 40rpx;
+$radius-pill: 999rpx;
+
+$page-padding: 32rpx;
+$section-gap: 28rpx;
+
+$motion-fast: 160ms ease;
+$motion-base: 240ms ease;
+$motion-slow: 360ms ease;
+$motion-shily: 420ms ease;
+$press-scale: 0.985;
+
+// Compatibility aliases for existing pages. They point only to locked tokens.
+$color-blue: $color-blue-soft;
+$color-white: $color-bg;
+$color-card-solid: $color-card;
+$color-text-soft: $color-text-second;
+$color-text-muted: $color-text-third;
+$color-primary-mid: $color-primary-light;
+$color-border-soft: $color-border;
+$color-glass-border: $color-border;
+$color-glass-strong: $color-card;
+$color-glass-soft: $color-card;
+$color-page-fade: $color-bg;
+$color-page-solid: $color-bg;
+$color-shily-glow: $color-shily-light;
+$color-blue-glow: $color-blue-light;
+$color-transparent: transparent;
+
+$radius-sm: $radius-card;
+$radius-md: $radius-card;
+$radius-lg: $radius-card;
+$radius-xl: $radius-large;
+
+$shadow-strong: $shadow-card;
+$shadow-ring: $shadow-soft;
+
+$gradient-primary: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+$gradient-page: linear-gradient(180deg, $color-bg-soft 0%, $color-bg 360rpx);
+$gradient-tint: linear-gradient(135deg, $color-primary-light, $color-blue-light);
+$gradient-weather: linear-gradient(180deg, $color-blue-light 0%, $color-primary-light 50%, $color-bg 100%);
+$gradient-home: radial-gradient(circle at 0% 8%, $color-primary-light, $color-transparent 250rpx), radial-gradient(circle at 50% 34%, $color-shily-light, $color-transparent 330rpx), $color-bg;
+$gradient-hero: radial-gradient(circle at 34% 44%, $color-shily-light, $color-transparent 240rpx), linear-gradient(135deg, $color-primary-light, $color-blue-light);
+
+$tab-height: 98rpx;

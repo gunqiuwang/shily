@@ -1,54 +1,140 @@
-// 指标卡片
+@use '../../styles/tokens.scss' as *;
+
 .metric-card {
-  width: 100%;
-  box-sizing: border-box;
-  background: #FFFFFF;
-  border-radius: 32rpx;
-  padding: 28rpx 24rpx;
-  box-shadow: 0 8rpx 32rpx rgba(59, 112, 82, 0.06);
+  min-height: 124rpx;
+  padding: 20rpx 24rpx;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  gap: 10rpx;
+  box-sizing: border-box;
+}
+
+.metric-card--tap:active {
+  transform: scale($press-scale);
+}
+
+.metric-card__head {
+  display: flex;
   align-items: center;
-  gap: 12rpx;
+  gap: 10rpx;
+  width: 100%;
+  min-height: 40rpx;
 }
 
 .metric-card__icon {
-  font-size: 48rpx;
+  width: 40rpx;
+  height: 40rpx;
+  flex-shrink: 0;
+  opacity: 0.92;
+  filter: drop-shadow(0 6rpx 10rpx rgba(59, 112, 82, 0.08));
+  animation: metricIconPop 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .metric-card__label {
+  display: block;
+  flex: 1;
+  min-width: 0;
   font-size: 24rpx;
-  color: #6B7C76;
+  font-weight: 400;
+  color: $color-text-second;
+  line-height: 1.25;
 }
 
 .metric-card__value {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   gap: 4rpx;
+  height: 38rpx;
 }
 
 .metric-card__number {
-  font-size: 40rpx;
-  font-weight: 600;
-  color: #1F2D2A;
+  font-size: 32rpx;
+  font-weight: 760;
+  color: $color-text;
+  line-height: 1;
 }
 
 .metric-card__unit {
-  font-size: 24rpx;
-  color: #6B7C76;
+  font-size: 22rpx;
+  color: $color-text-third;
+  line-height: 1.1;
+}
+
+.metric-card__note {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 30rpx;
+  padding: 5rpx 12rpx;
+  border-radius: $radius-pill;
+  font-size: 20rpx;
+  font-weight: 600;
+  line-height: 1;
+  color: $color-primary-deep;
+  background: $color-primary-light;
+}
+
+.metric-card__note--blue {
+  color: $color-text-second;
+  background: $color-blue-light;
+}
+
+.metric-card__note--shily {
+  color: $color-text-second;
+  background: $color-shily-light;
+}
+
+.metric-card__note--coral {
+  color: $color-text-second;
+  background: rgba(247, 183, 178, 0.18);
 }
 
 .metric-card__progress {
   width: 100%;
   height: 8rpx;
-  background: #E8EFEA;
-  border-radius: 4rpx;
+  border-radius: $radius-pill;
+  background: $color-bg-soft;
   overflow: hidden;
 }
 
 .metric-card__progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #7BC89C, #9DDFC0);
-  border-radius: 4rpx;
-  transition: width 0.3s ease;
+  border-radius: $radius-pill;
+  background: $color-primary;
+}
+
+.metric-card__progress-bar--blue {
+  background: $color-blue-soft;
+}
+
+.metric-card__progress-bar--shily {
+  background: $color-shily;
+}
+
+.metric-card__progress-bar--coral {
+  background: $color-coral;
+}
+
+@keyframes metricIconPop {
+  0% {
+    opacity: 0;
+    transform: translateY(5rpx) scale(0.82);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-1rpx) scale(1.08);
+  }
+
+  100% {
+    opacity: 0.92;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .metric-card__icon {
+    animation: none;
+  }
 }
